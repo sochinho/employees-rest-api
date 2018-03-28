@@ -11,8 +11,8 @@ import java.util.Date;
 
 @MappedSuperclass
 @Data
-@EqualsAndHashCode(exclude = {"createDate", "modifyDate"})
-public abstract class BaseEntity implements Serializable {
+@EqualsAndHashCode(exclude = {"createdDate", "modifyDate"})
+abstract class BaseEntity implements Serializable {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

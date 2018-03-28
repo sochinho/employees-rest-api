@@ -1,5 +1,6 @@
 package com.braintri.employees.model;
 
+import lombok.Builder;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 
@@ -11,6 +12,7 @@ import java.util.List;
 
 @EqualsAndHashCode(callSuper = true)
 @Data
+@Builder
 @Entity
 @Table(name = "positions")
 public class Position extends BaseEntity {

@@ -2,7 +2,11 @@ spring:
   application:
     name: employees-rest-api
   datasource:
-#    url: jdbc:h2:file:~/employees-db
-#    username: sa
-#    password: sa
+    url: jdbc:h2:mem:testdb
     driver-class-name: org.h2.Driver
+  h2:
+    console:
+      enabled: true
+
+swagger:
+  enabled: true

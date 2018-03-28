@@ -1,17 +1,21 @@
 package com.braintri.employees.converter;
 
-import com.braintri.employees.dto.EmployeeDto;
+import com.braintri.employees.dto.EmployeeDTO;
 import com.braintri.employees.model.Employee;
+import lombok.AllArgsConstructor;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.core.convert.converter.Converter;
 import org.springframework.stereotype.Component;
 
 @Component
-public final class EmployeeConventer implements Converter<Employee, EmployeeDto> {
+@AllArgsConstructor(onConstructor = @__(@Autowired))
+public class EmployeeDTOConverter implements Converter<Employee, EmployeeDTO> {
 
     @Override
-    public EmployeeDto convert(Employee employee) {
+    public EmployeeDTO convert(Employee employee) {
 
-        return EmployeeDto.builder()
+        return EmployeeDTO.builder()
+                .id(employee.getId())
                 .email(employee.getEmail())
                 .firstName(employee.getFirstName())
                 .lastName(employee.getLastName())
