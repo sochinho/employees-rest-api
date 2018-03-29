@@ -1,0 +1,5 @@
+spring:
+  application:
+    name: employees-rest-api
+  datasource:
+    initialization-mode: never
