@@ -40,10 +40,9 @@ public class EmployeeServiceTest {
 
     private String firstName1 = "firstName1", firstName2 = "firstName2";
     private String lastName1 = "lastName1", lastName2 = "lastName2";
-    private String mail1 = "email1@mail.com", mail2 = "email1@mail.com";
+    private String mail1 = "email1@mail.com", mail2 = "email2@mail.com";
 
     private Employee employee1, employee2;
-    private EmployeeDTO employeeDto1, employeeDto2;
     private Position position1, position2;
 
     @Before
@@ -72,14 +71,14 @@ public class EmployeeServiceTest {
                 .position(position2)
                 .build();
 
-        employeeDto1 = EmployeeDTO.builder()
+        EmployeeDTO employeeDto1 = EmployeeDTO.builder()
                 .firstName(firstName1)
                 .lastName(lastName1)
                 .email(mail1)
                 .positionId(position1.getId())
                 .build();
 
-        employeeDto2 = EmployeeDTO.builder()
+        EmployeeDTO employeeDto2 = EmployeeDTO.builder()
                 .firstName(firstName2)
                 .lastName(lastName2)
                 .email(mail2)

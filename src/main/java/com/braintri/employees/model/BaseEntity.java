@@ -10,8 +10,8 @@ import java.io.Serializable;
 import java.util.Date;
 
 @MappedSuperclass
-@Data
 @EqualsAndHashCode(exclude = {"createdDate", "modifyDate"})
+@Data
 abstract class BaseEntity implements Serializable {
 
     @Id

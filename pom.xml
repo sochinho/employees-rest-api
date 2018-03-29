@@ -94,6 +94,13 @@
             <version>${swagger.version}</version>
         </dependency>
 
+        <!-- GSON -->
+        <dependency>
+            <groupId>com.google.code.gson</groupId>
+            <artifactId>gson</artifactId>
+            <version>${gson.version}</version>
+        </dependency>
+
     </dependencies>
 
     <build>

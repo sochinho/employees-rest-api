@@ -19,7 +19,7 @@ public class PositionController {
     private PositionService positionService;
 
     @GetMapping("/all")
-    public ResponseEntity<List<PositionDTO>> getAllEmployees() {
+    public ResponseEntity<List<PositionDTO>> getAllPositions() {
         return ResponseEntity.ok(positionService.getAllPositions());
     }
 }
